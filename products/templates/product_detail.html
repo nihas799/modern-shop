@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ===============================
+     PRODUCT DETAIL SECTION
+================================ -->
+<div class="container my-5 py-5 fade-in">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'product_list' %}"
+                    class="text-decoration-none text-muted">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+        </ol>
+    </nav>
+
+    <div class="row gx-5">
+        <!-- PRODUCT IMAGE -->
+        <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="p-4 bg-white rounded-4 shadow-sm position-sticky top-0" style="z-index: 1;">
+                {% if product.image %}
+                <img src="{{ product.image.url }}" class="img-fluid rounded-3 w-100" alt="{{ product.name }}"
+                    style="object-fit: cover; max-height: 600px; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);">
+                {% else %}
+                <div class="d-flex align-items-center justify-content-center bg-light rounded-3" style="height: 500px;">
+                    <i class="fas fa-image fa-5x text-muted opacity-25"></i>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- PRODUCT INFO -->
+        <div class="col-lg-6">
+            <div class="ps-lg-4">
+                <span
+                    class="badge bg-light text-primary border border-primary px-3 py-2 rounded-pill mb-3 text-uppercase"
+                    style="letter-spacing: 0.1em; font-size: 0.75rem;">
+                    {{ product.category.name|default:"Premium" }}
+                </span>
+
+                <h1 class="display-4 fw-bold text-dark mb-3">{{ product.name }}</h1>
+
+                <div class="mb-4">
+                    <span class="h2 text-accent fw-bold me-3">₹ {{ product.price }}</span>
+                    <!-- Optional: Original price if discounted -->
+                    <!-- <span class="text-muted text-decoration-line-through">₹ 2500.00</span> -->
+                </div>
+
+                <div class="mb-4">
+                    <div class="text-warning small mb-2">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-muted ms-2">(4.8/5 Reviews)</span>
+                    </div>
+                </div>
+
+                <p class="lead text-muted mb-5" style="line-height: 1.8;">
+                    {{ product.description }}
+                </p>
+
+                <!-- Stock Divider -->
+                <hr class="my-4 text-muted opacity-25">
+
+                <div class="d-flex align-items-center mb-4">
+                    <span class="text-secondary fw-semibold me-4">Availability:</span>
+                    {% if product.stock > 0 %}
+                    <span class="text-success fw-medium"><i class="fas fa-check-circle me-1"></i> In Stock</span>
+                    {% else %}
+                    <span class="text-danger fw-medium"><i class="fas fa-times-circle me-1"></i> Out of Stock</span>
+                    {% endif %}
+                </div>
+
+                <div class="d-grid gap-3 col-lg-10">
+                    <a href="{% url 'add_to_cart' product.id %}"
+                        class="btn btn-premium btn-lg py-3 rounded-pill shadow-lg">
+                        <i class="fas fa-shopping-bag me-2"></i> Add to Cart
+                    </a>
+                                              <!-- Buy Now -->
+                            <a href="{% url 'buy_now' product.id %}"
+                               class="btn btn-warning btn-lg rounded-pill">
+                                ⚡ Buy Now
+                            </a>
+
+                        </div
+                    {% if user.is_authenticated %}
+                            <a href="{% url 'add_to_wishlist' product.id %}"
+                               class="btn btn-outline-dark btn-lg py-3 rounded-pill">
+                                <i class="far fa-heart me-2"></i> Add to Wishlist
+                            </a>
+                            {% else %}
+                            <a href="{% url 'login' %}?next={{ request.path }}"
+                               class="btn btn-outline-dark btn-lg py-3 rounded-pill">
+                                <i class="far fa-heart me-2"></i> Login to Wishlist
+                            </a>
+                            {% endif %}
+
+                <!-- Features / Info -->
+                <div class="row mt-5 pt-3 g-3">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-truck text-accent fs-4 me-3"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Free Shipping</h6>
+                                <small class="text-muted">On all orders over ₹499</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-shield-alt text-accent fs-4 me-3"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Secure Payment</h6>
+                                <small class="text-muted">100% Secure Checkout</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

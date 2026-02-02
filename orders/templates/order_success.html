@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="order-success-wrapper">
+    <div class="order-success-card">
+
+        <!-- Success Icon -->
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+
+        <!-- Text -->
+        <h1>Order Confirmed</h1>
+        <p class="subtitle">
+            Thank you for shopping with <strong>ModernShop</strong>.<br>
+            Your order has been placed successfully.
+        </p>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Actions -->
+        <div class="actions">
+            <a href="{% url 'product_list' %}" class="btn btn-primary btn-lg">
+                Continue Shopping
+            </a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

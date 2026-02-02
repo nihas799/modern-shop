@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ================= HERO CAROUSEL ================= -->
+<div id="homeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="carousel-slide slide-one">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 text-white text-md-start text-center">
+                            <span class="text-warning text-uppercase mb-3 d-block"
+                                  style="letter-spacing: 0.2em; font-size: 0.9rem; font-weight: 600;">
+                                Welcome to ModernShop
+                            </span>
+                            <h1>Shop Smart.<br>Live Better.</h1>
+                            <p class="opacity-75 mb-4">
+                                Discover premium products designed to elevate your lifestyle.
+                            </p>
+                            <a href="#products" class="btn btn-premium btn-lg">
+                                Start Shopping
+                            </a>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block text-center">
+                            <i class="fas fa-shopping-bag"
+                               style="font-size: 14rem; color: rgba(255,255,255,0.1);"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="carousel-slide slide-two">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 text-white text-md-start text-center">
+                            <span class="text-warning text-uppercase mb-3 d-block"
+                                  style="letter-spacing: 0.2em; font-size: 0.9rem; font-weight: 600;">
+                                New Arrivals
+                            </span>
+                            <h1>Innovation<br>Meets Style.</h1>
+                            <p class="opacity-75 mb-4">
+                                Explore the latest electronics and fashion trends.
+                            </p>
+                            <a href="#products" class="btn btn-premium btn-lg">
+                                Explore Collection
+                            </a>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block text-center">
+                            <i class="fas fa-mobile-alt"
+                               style="font-size: 14rem; color: rgba(255,255,255,0.1);"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <div class="carousel-slide slide-three">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 text-white text-md-start text-center">
+                            <span class="text-warning text-uppercase mb-3 d-block"
+                                  style="letter-spacing: 0.2em; font-size: 0.9rem; font-weight: 600;">
+                                Exclusive Deals
+                            </span>
+                            <h1>Unbeatable<br>Offers Daily.</h1>
+                            <p class="opacity-75 mb-4">
+                                Grab the best deals before they’re gone.
+                            </p>
+                            <a href="#products" class="btn btn-premium btn-lg">
+                                View Deals
+                            </a>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block text-center">
+                            <i class="fas fa-tags"
+                               style="font-size: 14rem; color: rgba(255,255,255,0.1);"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- ================= PRODUCTS ================= -->
+<div class="container my-5 py-5" id="products">
+
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h5 class="text-uppercase text-accent mb-2" style="letter-spacing: 0.15em;">
+                Curated for You
+            </h5>
+            <h2 class="fw-bold display-6">Featured Collection</h2>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        {% for product in products %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card product-card h-100">
+
+                <div class="product-img-wrapper">
+                    <a href="{% url 'product_detail' product.slug %}">
+                        {% if product.image %}
+                        <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                        {% else %}
+                        <div class="d-flex align-items-center justify-content-center" style="height: 220px;">
+                            <i class="fas fa-image text-muted fa-3x"></i>
+                        </div>
+                        {% endif %}
+                    </a>
+                </div>
+
+                <div class="card-body d-flex flex-column">
+                    <span class="category-label mb-1">{{ product.category.name }}</span>
+
+                    <h5 class="card-title">
+                        <a href="{% url 'product_detail' product.slug %}" class="text-decoration-none text-dark">
+                            {{ product.name }}
+                        </a>
+                    </h5>
+
+                    <div class="mt-auto">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <p class="price fw-bold mb-0">₹ {{ product.price }}</p>
+                            <div class="text-warning small">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <a href="{% url 'add_to_cart' product.id %}"
+                               class="btn btn-premium flex-grow-1">
+                                <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                            </a>
+
+                            <a href="{% url 'add_to_wishlist' product.id %}"
+                               class="btn btn-outline-danger wishlist-btn"
+                               title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}
