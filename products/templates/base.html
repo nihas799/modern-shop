@@ -1,156 +1,257 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ModernShop | Premium Store</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <!-- FontAwesome -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Bootstrap 5 -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-premium">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'product_list' %}">
-                Modern<span class="text-accent">Shop</span>
-            </a>
+{% if messages %}
+<div class="container mt-3">
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} rounded-3">
+            {{ message }}
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-icon"><i class="fas fa-bars"></i></span>
-            </button>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-premium">
+    <div class="container">
 
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'product_list' %}">Home</a>
-                    </li>
+        <a class="navbar-brand" href="{% url 'product_list' %}">
+            Modern<span class="text-accent">Shop</span>
+        </a>
 
-                    {% for category in categories %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'category_filter' category.slug %}">
-                            {{ category.name }}
-                        </a>
-                    </li>
-                    {% endfor %}
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-icon"><i class="fas fa-bars"></i></span>
+        </button>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'cart_detail' %}">
-                            <i class="fas fa-shopping-bag"></i> Cart
-                        </a>
-                    </li>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto align-items-center">
 
-                    {% if user.is_authenticated %}
-                    <li class="nav-item ms-lg-3">
-                        <span class="nav-link fw-semibold"
-                            style="cursor: default; color: var(--accent-gold) !important;">
-                            Hi, {{ user.username }}
-                        </span>
-                    </li>
-                    <li class="nav-item me-3">
-            <a href="{% url 'wishlist' %}" class="nav-link position-relative">
-                <i class="fas fa-heart"></i>
-                <span class="wishlist-text">Wishlist</span>
-            </a>
-        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'product_list' %}">Home</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'my_orders' %}">My Orders</a>
-                    </li>
+                {% for category in categories %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'category_filter' category.slug %}">
+                        {{ category.name }}
+                    </a>
+                </li>
+                {% endfor %}
 
-                    <li class="nav-item ms-2">
-                        <form method="post" action="{% url 'logout' %}" class="d-inline">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-sm btn-outline-danger"
-                                style="border-radius: 20px; padding: 0.3rem 1rem;">
-                                Logout
+                <!-- CART -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cart_detail' %}">
+                        <i class="fas fa-shopping-bag"></i> Cart
+                    </a>
+                </li>
+
+                <!-- 🔍 SEARCH -->
+                <li class="nav-item ms-3 position-relative">
+                    <div class="search-container">
+
+                        <form method="GET" action="{% url 'search' %}" class="search-form">
+                            <input type="text"
+                                   name="q"
+                                   class="search-input"
+                                   placeholder="Search products..."
+                                   autocomplete="off">
+
+                            <button type="submit" class="search-btn">
+                                <i class="fas fa-search"></i>
                             </button>
+
+                            <!-- LIVE DROPDOWN -->
+                            <div class="search-suggestions"></div>
                         </form>
-                    </li>
-                    {% else %}
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-sm btn-premium" href="{% url 'login' %}">
-                            Login
-                        </a>
-                    </li>
-                    <li class="nav-item ms-2">
-                        <a class="btn btn-sm btn-outline-premium" href="{% url 'register' %}">
-                            Register
-                        </a>
-                    </li>
-                    {% endif %}
 
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- PAGE CONTENT -->
-    <main class="flex-grow-1 fade-in">
-        {% block content %}{% endblock %}
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer mt-auto">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5 class="mb-3">Modern<span class="text-accent">Shop</span></h5>
-                    <p class="text-muted">Experience luxury shopping at your fingertips. Premium products, exceptional
-                        service.</p>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5>Shop</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="{% url 'product_list' %}">All Products</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5>Support</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Shipping & Returns</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <h5>Newsletter</h5>
-                    <p class="text-muted small">Subscribe to receive updates, access to exclusive deals, and more.</p>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Your email address"
-                            aria-label="Recipient's username"
-                            style="border-radius: 4px 0 0 4px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: #fff;">
-                        <button class="btn btn-premium" type="button"
-                            style="border-radius: 0 4px 4px 0;">Subscribe</button>
                     </div>
-                </div>
-            </div>
-            <div class="border-top border-secondary pt-4 mt-4 text-center">
-                <p class="mb-0 text-muted small">&copy; 2026 ModernShop. All rights reserved.</p>
-            </div>
+                </li>
+
+                <!-- USER -->
+                {% if user.is_authenticated %}
+                <li class="nav-item dropdown ms-lg-3">
+                    <a class="nav-link dropdown-toggle fw-semibold"
+                       data-bs-toggle="dropdown"
+                       style="color: var(--accent-gold) !important;">
+                        <i class="fas fa-user-circle me-1"></i>
+                        {{ user.username }}
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3">
+                        <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
+                        <li><a class="dropdown-item" href="{% url 'my_orders' %}">My Orders</a></li>
+                        <li><a class="dropdown-item" href="{% url 'wishlist' %}">Wishlist</a></li>
+                        <li><hr></li>
+                        <li>
+                            <form method="post" action="{% url 'logout' %}">
+                                {% csrf_token %}
+                                <button class="dropdown-item text-danger">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+                {% else %}
+                <li class="nav-item ms-3">
+                    <a class="btn btn-sm btn-premium" href="{% url 'login' %}">Login</a>
+                </li>
+                {% endif %}
+
+            </ul>
         </div>
-    </footer>
+    </div>
+</nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CONTENT -->
+<main class="flex-grow-1 fade-in">
+    {% block content %}{% endblock %}
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light pt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- BRAND -->
+      <div class="col-md-3">
+        <h5>ModernShop</h5>
+        <p class="text-muted small">
+          Premium products, trusted quality & fast delivery across India.
+        </p>
+        <p class="text-muted small">
+          📧 support@nihasnavas81130@gmail.com<br>
+          📞 +91 9539107363
+        </p>
+      </div>
+
+      <!-- SHOP -->
+      <div class="col-md-3">
+        <h5>Shop</h5>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'product_list' %}">All Products</a></li>
+          <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+          <li><a href="{% url 'cart_detail' %}">Cart</a></li>
+          <li><a href="{% url 'my_orders' %}">My Orders</a></li>
+        </ul>
+      </div>
+
+      <!-- SUPPORT -->
+      <div class="col-md-3">
+  <h5>Support</h5>
+  <ul class="list-unstyled">
+    <li>
+      <a href="{% url 'contact' %}" class="footer-link">
+        Contact Us
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'faq' %}" class="footer-link">
+        FAQ
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'shipping_returns' %}" class="footer-link">
+        Shipping & Returns
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      <!-- NEWSLETTER -->
+      <div class="col-md-3">
+        <h5>Newsletter</h5>
+        <form method="post" action="{% url 'subscribe_newsletter' %}">
+          {% csrf_token %}
+          <input type="email" name="email"
+                 class="form-control mb-2"
+                 placeholder="Your email address" required>
+          <button class="btn btn-warning w-100">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <hr class="mt-4">
+    <p class="text-center text-muted small">
+      © 2026 ModernShop. All rights reserved.
+    </p>
+  </div>
+</footer>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Expand search
+const form = document.querySelector(".search-form");
+const btn = document.querySelector(".search-btn");
+
+btn.addEventListener("click", function(e){
+    if(!form.classList.contains("active")){
+        e.preventDefault();
+        form.classList.add("active");
+    }
+});
+
+// Live search
+const input = document.querySelector(".search-input");
+const box = document.querySelector(".search-suggestions");
+
+input.addEventListener("keyup", function(){
+    let q = input.value;
+
+    if(q.length < 1){
+        box.style.display = "none";
+        return;
+    }
+
+    fetch(`/search-suggestions/?q=${q}`)
+    .then(res => res.json())
+    .then(data => {
+        box.innerHTML = "";
+        box.style.display = "block";
+
+        data.forEach(item => {
+            let div = document.createElement("div");
+            div.innerText = item.name;
+
+            div.onclick = () => {
+                window.location.href = `/search/?q=${item.name}`;
+            };
+
+            box.appendChild(div);
+        });
+    });
+});
+
+// close dropdown
+document.addEventListener("click", function(e){
+    if(!document.querySelector(".search-container").contains(e.target)){
+        box.style.display = "none";
+        form.classList.remove("active");
+    }
+});
+</script>
+
 </body>
-
 </html>

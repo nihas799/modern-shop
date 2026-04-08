@@ -380,7 +380,7 @@ ul {
 ===================================================== */
 .footer {
     background-color: var(--primary-dark);
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(242, 227, 227, 0.6);
     padding: 4rem 0 2rem;
     font-size: 0.9rem;
 }
@@ -512,4 +512,208 @@ ul {
 .btn-outline-danger:hover {
     background-color: #e63946;
     color: #fff;
+}
+footer a,
+.footer-link {
+    color: #bfc7d5;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+footer a:hover,
+.footer-link:hover {
+    color: #ffc107;
+}
+.auth-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* SEARCH BAR */
+.search-container {
+    position: relative;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    overflow: hidden;
+    width: 50px;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+
+.search-form.active {
+    width: 250px;
+    background: rgba(255,255,255,0.12);
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search-form.active .search-input {
+    opacity: 1;
+}
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.search-btn i {
+    font-size: 16px;
+}
+.search-btn:hover {
+    color: #d4af37; /* gold */
+}
+.search-container {
+    display: flex;
+    align-items: center;
+}
+.extra-actions {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Show only when hover */
+.product-card:hover .extra-actions {
+    max-height: 300px;
+}
+.search-form {
+    display: flex;
+    width: 50px;
+    overflow: hidden;
+    transition: 0.3s;
+    background: transparent;
+}
+
+.search-form.active {
+    width: 250px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50px;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    color: white;
+    padding: 8px;
+    width: 100%;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 45px;
+    width: 250px;
+    background: white;
+    color: black;
+    display: none;
+    border-radius: 8px;
+    z-index: 999;
+}
+
+.search-suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-suggestions div:hover {
+    background: #f1f5f9;
+}
+/* BACKGROUND */
+.payment-wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* CARD */
+.payment-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    width: 350px;
+    color: white;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* TITLE */
+.payment-card h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* AMOUNT */
+.payment-amount {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #facc15;
+}
+
+/* BUTTON */
+.pay-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.pay-btn:hover {
+    transform: translateY(-2px);
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+}
+
+.form-control {
+    width: 100%;
+}
+.auth-card form {
+    width: 100%;
+}
+
+.auth-card label {
+    display: block;
+    text-align: left;
+}
+
+.auth-card input {
+    width: 100%;
 }

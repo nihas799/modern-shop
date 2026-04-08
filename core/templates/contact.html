@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container my-5 py-5">
+
+    <!-- Page Header -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Contact Us</h2>
+        <p class="text-muted">
+            We’re here to help. Reach out to us anytime.
+        </p>
+        <div class="d-flex justify-content-center mt-3">
+            <div style="height:3px;width:80px;background:linear-gradient(90deg,transparent,#d4af37,transparent);"></div>
+        </div>
+    </div>
+
+    <div class="row g-5">
+
+        <!-- Contact Info -->
+        <div class="col-lg-5">
+            <div class="card shadow-sm border-0 rounded-4 h-100 p-4">
+                <h5 class="fw-semibold mb-4">Get in touch</h5>
+
+                <p class="text-muted mb-4">
+                    Have a question about your order, payment, or delivery?
+                    Our support team is happy to assist you.
+                </p>
+
+                <div class="mb-3 d-flex align-items-start">
+                    <i class="fas fa-map-marker-alt text-warning me-3 mt-1"></i>
+                    <div>
+                        <strong>Address</strong>
+                        <p class="mb-0 text-muted">
+                            ModernShop Pvt Ltd<br>
+                            Kochi, Kerala – 686691
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-3 d-flex align-items-start">
+                    <i class="fas fa-phone-alt text-warning me-3 mt-1"></i>
+                    <div>
+                        <strong>Phone</strong>
+                        <p class="mb-0 text-muted">+91 98765 43210</p>
+                    </div>
+                </div>
+
+                <div class="mb-3 d-flex align-items-start">
+                    <i class="fas fa-envelope text-warning me-3 mt-1"></i>
+                    <div>
+                        <strong>Email</strong>
+                        <p class="mb-0 text-muted">support@modernshop.com</p>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <strong>Support Hours</strong>
+                    <p class="text-muted mb-0">
+                        Mon – Sat : 9:00 AM – 7:00 PM
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+            <div class="card shadow-sm border-0 rounded-4 p-4">
+                <h5 class="fw-semibold mb-4">Send us a message</h5>
+
+                <form method="post">
+                    {% csrf_token %}
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" name="name" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Subject</label>
+                        <input type="text" name="subject" class="form-control" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" rows="5" class="form-control" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-premium px-5">
+                        <i class="fas fa-paper-plane me-2"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

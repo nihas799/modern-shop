@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+
+    <!-- Page Header -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Shipping & Returns</h2>
+        <p class="text-muted">
+            Everything you need to know about delivery, shipping charges, and returns.
+        </p>
+    </div>
+
+    <!-- SHIPPING SECTION -->
+    <div class="card border-0 shadow-sm rounded-4 mb-4">
+        <div class="card-body p-4">
+            <h5 class="fw-semibold mb-3">
+                <i class="fas fa-truck me-2 text-warning"></i> Shipping Information
+            </h5>
+
+            <ul class="text-muted mb-0">
+                <li>We ship across India within <strong>2–5 business days</strong>.</li>
+                <li>Free shipping on orders above <strong>₹999</strong>.</li>
+                <li>Orders below ₹999 may include a small shipping fee.</li>
+                <li>You will receive tracking details once your order is shipped.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RETURNS SECTION -->
+    <div class="card border-0 shadow-sm rounded-4 mb-4">
+        <div class="card-body p-4">
+            <h5 class="fw-semibold mb-3">
+                <i class="fas fa-undo-alt me-2 text-warning"></i> Returns & Refunds
+            </h5>
+
+            <ul class="text-muted mb-0">
+                <li>Products can be returned within <strong>7 days</strong> of delivery.</li>
+                <li>Items must be unused and in original packaging.</li>
+                <li>Refunds will be processed within <strong>5–7 business days</strong>.</li>
+                <li>COD refunds will be processed to your bank account.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CANCELLATION -->
+    <div class="card border-0 shadow-sm rounded-4 mb-4">
+        <div class="card-body p-4">
+            <h5 class="fw-semibold mb-3">
+                <i class="fas fa-ban me-2 text-warning"></i> Order Cancellation
+            </h5>
+
+            <p class="text-muted mb-0">
+                Orders can be cancelled before they are shipped.
+                Once shipped, cancellation is not possible.
+                You can cancel an order from the <strong>My Orders</strong> page.
+            </p>
+        </div>
+    </div>
+
+    <!-- SUPPORT CTA -->
+    <div class="text-center mt-5">
+        <p class="text-muted mb-2">
+            Still have questions?
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-warning px-4 rounded-pill">
+            Contact Support
+        </a>
+    </div>
+
+</div>
+{% endblock %}

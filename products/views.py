@@ -3,8 +3,9 @@ from .models import Product, Category
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Product, Wishlist
-from cart.cart import Cart
-
+from cart.models import Cart, CartItem
+from django.shortcuts import get_object_or_404, redirect
+from django.http import JsonResponse
 
 def product_list(request, category_slug=None):
     categories = Category.objects.all()
@@ -55,15 +56,36 @@ def remove_from_wishlist(request, product_id):
     return redirect('wishlist')
 @login_required
 def buy_now(request, product_id):
-    product = get_object_or_404(Product, id=product_id)
+    product = Product.objects.get(id=product_id)
 
-    cart = Cart(request)
-    cart.clear()  # remove existing cart items
+    cart, created = Cart.objects.get_or_create(user=request.user)
 
-    cart.add(
+    # clear old cart
+    cart.items.all().delete()
+
+    # add selected product
+    CartItem.objects.create(
+        cart=cart,
         product=product,
-        quantity=1,
-
+        quantity=request.POST.get('quantity', 1)
     )
 
     return redirect('checkout')
+def search_view(request):
+    query = request.GET.get('q')
+    results = []
+
+    if query:
+        results = Product.objects.filter(name__icontains=query)
+
+    return render(request, 'search.html', {'results': results, 'query': query})
+def search_suggestions(request):
+    query = request.GET.get('q', '')
+
+    if query:
+        products = Product.objects.filter(name__icontains=query)[:5]
+        data = list(products.values('name'))
+    else:
+        data = []
+
+    return JsonResponse(data, safe=False)

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container my-5">
+    <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-5">
+            <h3 class="mb-4">
+                <i class="fas fa-user-circle me-2"></i>
+                My Profile
+            </h3>
+
+            <p><strong>Username:</strong> {{ request.user.username }}</p>
+            <p><strong>Joined:</strong> {{ request.user.date_joined|date:"d M Y" }}</p>
+
+            <hr>
+
+            <a href="{% url 'my_orders' %}" class="btn btn-outline-primary me-2">
+                My Orders
+            </a>
+
+            <a href="{% url 'wishlist' %}" class="btn btn-outline-danger">
+                Wishlist
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

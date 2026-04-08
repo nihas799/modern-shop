@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="payment-wrapper">
+
+    <div class="payment-card">
+
+        <!-- TITLE -->
+        <h2>Secure Payment</h2>
+        <p class="text-muted">Complete your purchase safely</p>
+
+        <!-- AMOUNT -->
+        <div class="payment-amount">
+            ₹ {{ payment.amount|floatformat:2 }}
+        </div>
+
+        <!-- BUTTON -->
+        <button id="pay-btn" class="pay-btn">
+            <i class="fas fa-lock"></i> Pay Now
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Razorpay -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+var options = {
+    "key": "{{ razorpay_key }}",
+    "amount": "{{ payment.amount }}",
+    "currency": "INR",
+    "order_id": "{{ payment.razorpay_order_id }}",
+
+    "handler": function (response){
+        window.location.href =
+        `/payment-success/?payment_id=${response.razorpay_payment_id}&order_id=${response.razorpay_order_id}`;
+    }
+};
+
+var rzp = new Razorpay(options);
+
+// click
+document.getElementById("pay-btn").onclick = function(e){
+    rzp.open();
+    e.preventDefault();
+};
+
+// 🔥 AUTO OPEN (premium UX)
+window.onload = function(){
+    rzp.open();
+};
+</script>
+
+{% endblock %}

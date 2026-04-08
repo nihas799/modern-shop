@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'products',
     'cart',
-    'users',
     'orders',
+    'core',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -143,8 +144,10 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = 'yourgmail@gmail.com'
-EMAIL_HOST_PASSWORD = 'your_app_password'
+EMAIL_HOST_USER = 'nihasnavas81130@gmail.com'
+EMAIL_HOST_PASSWORD = 'brfx hopt aiha ffyj'
 
 DEFAULT_FROM_EMAIL = 'ModernShop <yourgmail@gmail.com>'
 
+RAZORPAY_KEY_ID = "rzp_test_SawVGOElzzfZ4z"
+RAZORPAY_KEY_SECRET = "XYPuj7piZ49RBySh2CRzTzFS"
