@@ -1,0 +1,1896 @@
+﻿[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 3,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 3,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 3,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 3,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 2,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 2,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 2,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 2,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 7,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 7,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 7,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 7,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add product",
+    "content_type": 8,
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change product",
+    "content_type": 8,
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete product",
+    "content_type": 8,
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view product",
+    "content_type": 8,
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add review",
+    "content_type": 9,
+    "codename": "add_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change review",
+    "content_type": 9,
+    "codename": "change_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete review",
+    "content_type": 9,
+    "codename": "delete_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view review",
+    "content_type": 9,
+    "codename": "view_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add wishlist",
+    "content_type": 10,
+    "codename": "add_wishlist"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change wishlist",
+    "content_type": 10,
+    "codename": "change_wishlist"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete wishlist",
+    "content_type": 10,
+    "codename": "delete_wishlist"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view wishlist",
+    "content_type": 10,
+    "codename": "view_wishlist"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add cart",
+    "content_type": 11,
+    "codename": "add_cart"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change cart",
+    "content_type": 11,
+    "codename": "change_cart"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete cart",
+    "content_type": 11,
+    "codename": "delete_cart"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view cart",
+    "content_type": 11,
+    "codename": "view_cart"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add cart item",
+    "content_type": 12,
+    "codename": "add_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change cart item",
+    "content_type": 12,
+    "codename": "change_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete cart item",
+    "content_type": 12,
+    "codename": "delete_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view cart item",
+    "content_type": 12,
+    "codename": "view_cartitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add order",
+    "content_type": 13,
+    "codename": "add_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change order",
+    "content_type": 13,
+    "codename": "change_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete order",
+    "content_type": 13,
+    "codename": "delete_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view order",
+    "content_type": 13,
+    "codename": "view_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add order item",
+    "content_type": 14,
+    "codename": "add_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change order item",
+    "content_type": 14,
+    "codename": "change_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete order item",
+    "content_type": 14,
+    "codename": "delete_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view order item",
+    "content_type": 14,
+    "codename": "view_orderitem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add contact message",
+    "content_type": 15,
+    "codename": "add_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change contact message",
+    "content_type": 15,
+    "codename": "change_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete contact message",
+    "content_type": 15,
+    "codename": "delete_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view contact message",
+    "content_type": 15,
+    "codename": "view_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add newsletter subscriber",
+    "content_type": 16,
+    "codename": "add_newslettersubscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change newsletter subscriber",
+    "content_type": 16,
+    "codename": "change_newslettersubscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete newsletter subscriber",
+    "content_type": 16,
+    "codename": "delete_newslettersubscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view newsletter subscriber",
+    "content_type": 16,
+    "codename": "view_newslettersubscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add profile",
+    "content_type": 17,
+    "codename": "add_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change profile",
+    "content_type": 17,
+    "codename": "change_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete profile",
+    "content_type": 17,
+    "codename": "delete_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view profile",
+    "content_type": 17,
+    "codename": "view_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add payment",
+    "content_type": 18,
+    "codename": "add_payment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change payment",
+    "content_type": 18,
+    "codename": "change_payment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete payment",
+    "content_type": 18,
+    "codename": "delete_payment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view payment",
+    "content_type": 18,
+    "codename": "view_payment"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$3lrHGoXLpFu57jPAQBFK8F$a99Fjs+1yP/KLEh2FTUzO6poa1wdR6T9BD8vQT86FJw=",
+    "last_login": "2026-03-26T08:41:52.192Z",
+    "is_superuser": false,
+    "username": "kadeeja",
+    "first_name": "",
+    "last_name": "",
+    "email": "kadeeja@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-26T08:41:50.910Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$UcD4gunqYSJ2RbdsUTlH08$UrZJW/cdguNX8zQGSduRnBQ/tx7yUZHhYAx83KScVVo=",
+    "last_login": "2026-04-08T06:50:20.212Z",
+    "is_superuser": true,
+    "username": "nihas",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-04-08T06:49:13.525Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$bp2FurrQhR3X4CtUCFT82o$YRAXBwn+nYO7IT/a3czCMc5W0E6nfE9qUwv+txLRAxo=",
+    "last_login": "2026-04-08T07:09:21.637Z",
+    "is_superuser": false,
+    "username": "Nihas ",
+    "first_name": "",
+    "last_name": "",
+    "email": "nihasnavas44@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-08T07:09:20.916Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$h7t451O5Owebl6m5F5OubV$DpM6B7ZMjGj3cgiZj4Jv+dF8HbWefmJ41cPfv6//tiY=",
+    "last_login": "2026-04-08T10:53:03.357Z",
+    "is_superuser": false,
+    "username": "kadeejakadu",
+    "first_name": "",
+    "last_name": "",
+    "email": "kadeejashameer110@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-08T10:43:38.632Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "products",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "products",
+    "model": "product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "products",
+    "model": "review"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "products",
+    "model": "wishlist"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "cart",
+    "model": "cart"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "cart",
+    "model": "cartitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "orders",
+    "model": "order"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "orders",
+    "model": "orderitem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "core",
+    "model": "contactmessage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "core",
+    "model": "newslettersubscriber"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "users",
+    "model": "profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "orders",
+    "model": "payment"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "475v5e8ksjhwnwvui4yq9zz5yvz556m0",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGln-soaSnjNYu7YXB5AtxUmFuDtESgHtm5n3EhHXpcZ1lDlOWZwFiMPvRpgepW0g37Hduky9LfNEclPkToe89lyel939O6g46re2zqdiyQB6R5iBHACDC8gKyQRlKJPzRbOx2jDrY04qeO_5ZI11Von3B-4rN5Q:1wAQWt:SuDdIhQBHBTULpx-8MZttB0MbmUtseT-ZeswQmZKdw0",
+    "expire_date": "2026-04-22T10:53:03.367Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mwqjl5k3azwbt0h4nonygiidv2i0oani",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hBggDIu3XsGMjBUqoYmpV0Z765NutDtf-_9l4i0rTVuvSxxYnEWWpx-t0T5UdoO-E7tNss8t3WZktwVedAurzOX5-Vw_w4q9fqtAVz2ThkMpgByJsUeR2ex4BjQclasKalQgNF4CB6tAk9ah8E74wbx_gDGrjae:1vponJ:Fd5rFEm_H9w9lxeGZDLy2Nh5mWk49H_HSgPuV3agaus",
+    "expire_date": "2026-02-24T14:32:49.059Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "w0jfarua79nis1t8d47zvbcchzk41pgg",
+  "fields": {
+    "session_data": ".eJxVjstuwyAURH8FsbYQBjuYLLPvNyAel0BrQ8pDVRTl32tXWaTbmTNH88BK9xZUr1BUdPiMJzy8Z0bbL0hH4T51umZic2olGnIg5NVW8pEdrJcX-08QdA37GpgdJeULuIlJ54WRRnrOKFghT0YIdnLOLVYbMTNhJg-WC-4WxzmXsxjlLjX9rlL-wecHPp6OA056g919gXgFdMtrRjXE0pDPBbUAqPZtg4Jybz623XAr0e6DmVJCB_zddWqx3f9ULTe9qnfg-fwFNX9dIA:1w7U3e:p13DKpHm9Shc3qMCacrB2I3-uGPZzMOW-sntLBbtmn4",
+    "expire_date": "2026-04-14T08:02:42.865Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "Clothing",
+    "slug": "clothing"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "name": "Electronics",
+    "slug": "electronics"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "name": "Accessories",
+    "slug": "accessories"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "name": "Beige polo shirt for the summer outfit",
+    "slug": "beige-polo-shirt-for-the-summer-outfit",
+    "description": "Old money",
+    "price": "500.00",
+    "stock": 15,
+    "image": "products/OLD-MONEY-STYLE-MEN-SHIRTS-2-Beige-Polo-For-The-Summer.webp",
+    "is_available": true,
+    "created_at": "2026-02-10T14:37:57.578Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "name": "OLD MONEY Striped Long Sleeve Shirt",
+    "slug": "old-money-striped-long-sleeve-shirt",
+    "description": "ôTimeless tailoring for a life of quiet luxury.ö",
+    "price": "1000.00",
+    "stock": 5,
+    "image": "products/O1CN01rwDK1l1SaxeKV5KqC__2214192652264-0-cib.webp",
+    "is_available": true,
+    "created_at": "2026-02-10T14:41:29.103Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "category": 1,
+    "name": "OLD MONEY Linen Shirt",
+    "slug": "old-money-linen-shirt",
+    "description": "ôWhere heritage meets effortless elegance.ö",
+    "price": "1500.00",
+    "stock": 7,
+    "image": "products/006_2ae361d2-3549-4b43-8331-0c858f6c5a4e.webp",
+    "is_available": true,
+    "created_at": "2026-02-10T14:44:05.746Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "category": 1,
+    "name": "OLD MONEY SHORT COAT",
+    "slug": "old-money-short-coat",
+    "description": "ôUnderstated style, built for generations.ö",
+    "price": "3000.00",
+    "stock": 2,
+    "image": "products/IMG-20240415-WA0014.webp",
+    "is_available": true,
+    "created_at": "2026-02-10T14:45:33.428Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "name": "Old Money Classic Shirt Black",
+    "slug": "old-money-classic-shirt-black",
+    "description": "ôClassic lines. Refined taste. No logos needed.ö",
+    "price": "1500.00",
+    "stock": 5,
+    "image": "products/9203af6b511f5cc8335f2235407fbc9e.jpg",
+    "is_available": true,
+    "created_at": "2026-02-10T14:48:30.887Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "category": 3,
+    "name": "Jaeger-LeCoultre Reverso watch",
+    "slug": "jaeger-lecoultre-reverso-watch",
+    "description": "ôTime, captured in its most beautiful form.ö",
+    "price": "5000.00",
+    "stock": 13,
+    "image": "products/Jaeger-LeCoultre-Reverso-1.webp",
+    "is_available": true,
+    "created_at": "2026-02-10T14:53:57.220Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "category": 3,
+    "name": "Vintage Pocket Watch",
+    "slug": "vintage-pocket-watch",
+    "description": "ôMinimal design, maximum presence.ö",
+    "price": "2.00",
+    "stock": 4000,
+    "image": "products/03b0242cc163742d969f1554cf7ccc8d.webp",
+    "is_available": true,
+    "created_at": "2026-02-10T14:55:00.358Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "category": 2,
+    "name": "Black iPhone 7",
+    "slug": "black-iphone-7",
+    "description": "ôDesigned to perform. Built to impress.ö",
+    "price": "20000.00",
+    "stock": 1,
+    "image": "products/black-iphone-7-water-resistance.webp",
+    "is_available": true,
+    "created_at": "2026-02-10T14:59:38.355Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "category": 2,
+    "name": "iPhone 14 Plus-128GB-Blue",
+    "slug": "iphone-14-plus-128gb-blue",
+    "description": "ôInnovation you can see. Performance you can feel.ö",
+    "price": "40000.00",
+    "stock": 4,
+    "image": "products/4dc822899eb248b893d71b4f536eaa4b.thumbnail.0000000000.webp",
+    "is_available": true,
+    "created_at": "2026-02-10T15:00:50.089Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "category": 1,
+    "name": "Tailored beige pants with a clean fit, sharp pleats for office and party wear",
+    "slug": "tailored-beige-pants-with-a-clean-fit-sharp-pleats",
+    "description": "Live To Wear",
+    "price": "2000.00",
+    "stock": 10,
+    "image": "products/Tailored_beige_pants_with_a_clean_fit_sharp_pleats_for_office_and_party_wear.jpg",
+    "is_available": true,
+    "created_at": "2026-03-31T07:06:08.661Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "category": 1,
+    "name": "Old Flippino",
+    "slug": "old-flippino",
+    "description": "Class That Last Forever",
+    "price": "5000.00",
+    "stock": 2,
+    "image": "products/8ad5a4dfb6d64f32e836eff4a3ef384d.jpg",
+    "is_available": true,
+    "created_at": "2026-03-31T07:09:34.514Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 2,
+  "fields": {
+    "user": 3,
+    "created_at": "2026-03-26T08:49:24.477Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 4,
+  "fields": {
+    "user": 6,
+    "created_at": "2026-04-08T07:26:41.714Z"
+  }
+},
+{
+  "model": "cart.cart",
+  "pk": 5,
+  "fields": {
+    "user": 7,
+    "created_at": "2026-04-08T10:53:25.379Z"
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 1,
+  "fields": {
+    "cart": 2,
+    "product": 2,
+    "quantity": 1
+  }
+},
+{
+  "model": "cart.cartitem",
+  "pk": 15,
+  "fields": {
+    "cart": 4,
+    "product": 7,
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 2,
+  "fields": {
+    "user": 6,
+    "full_name": "nihad",
+    "phone": "1234567890",
+    "address_line": "k",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "ONLINE",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:26:56.208Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 3,
+  "fields": {
+    "user": 6,
+    "full_name": "nihad",
+    "phone": "1234567890",
+    "address_line": "l",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "COD",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:27:12.529Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 4,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "ll",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "COD",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:28:14.680Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 5,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "ll",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "ONLINE",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:28:25.816Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 6,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "ll",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "ONLINE",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:36:00.374Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 7,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "ll",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "COD",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:39:28.281Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 8,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "ll",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "COD",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:39:51.701Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 9,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "ll",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "ONLINE",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:40:13.214Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 10,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "ll",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "cod",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:54:31.119Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 11,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "ll",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "cod",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:55:26.025Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 12,
+  "fields": {
+    "user": 6,
+    "full_name": "nihad",
+    "phone": "1234567890",
+    "address_line": "ll",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "1000.00",
+    "payment_method": "online",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T07:57:31.610Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 13,
+  "fields": {
+    "user": 6,
+    "full_name": "nihad",
+    "phone": "1234567890",
+    "address_line": "k",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "online",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T08:00:39.815Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 14,
+  "fields": {
+    "user": 6,
+    "full_name": "nihad",
+    "phone": "1234567890",
+    "address_line": "l",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "online",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T08:08:19.689Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 15,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "l",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "online",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T09:06:22.122Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 16,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "l",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "online",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T09:13:03.792Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 17,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "l",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "online",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T09:16:06.423Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 18,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "l",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "online",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T09:21:10.106Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 19,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "k",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "online",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T09:24:36.350Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 20,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "l",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "500.00",
+    "payment_method": "online",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T09:30:09.835Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 21,
+  "fields": {
+    "user": 6,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "l",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "2.00",
+    "payment_method": "online",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T09:31:37.812Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 22,
+  "fields": {
+    "user": 7,
+    "full_name": "ttttt",
+    "phone": "1234567890",
+    "address_line": "l",
+    "city": "Kochi, Kerala",
+    "post_office": "h",
+    "state": "kerala",
+    "pincode": "686691",
+    "total_price": "2.00",
+    "payment_method": "cod",
+    "payment_status": "PENDING",
+    "status": "PENDING",
+    "cancel_reason": null,
+    "created_at": "2026-04-08T10:53:39.791Z"
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 2,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 3,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 4,
+  "fields": {
+    "order": 4,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 5,
+  "fields": {
+    "order": 5,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 6,
+  "fields": {
+    "order": 6,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 7,
+  "fields": {
+    "order": 7,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 8,
+  "fields": {
+    "order": 8,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 9,
+  "fields": {
+    "order": 9,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 10,
+  "fields": {
+    "order": 10,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 11,
+  "fields": {
+    "order": 11,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 12,
+  "fields": {
+    "order": 12,
+    "product": 2,
+    "price": "1000.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 13,
+  "fields": {
+    "order": 13,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 14,
+  "fields": {
+    "order": 14,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 15,
+  "fields": {
+    "order": 15,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 16,
+  "fields": {
+    "order": 16,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 17,
+  "fields": {
+    "order": 17,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 18,
+  "fields": {
+    "order": 18,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 19,
+  "fields": {
+    "order": 19,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 20,
+  "fields": {
+    "order": 20,
+    "product": 1,
+    "price": "500.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 21,
+  "fields": {
+    "order": 21,
+    "product": 7,
+    "price": "2.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 22,
+  "fields": {
+    "order": 22,
+    "product": 7,
+    "price": "2.00",
+    "quantity": 1
+  }
+},
+{
+  "model": "orders.payment",
+  "pk": 1,
+  "fields": {
+    "user": 6,
+    "order": 15,
+    "razorpay_order_id": "order_SawWh93q9uMBp0",
+    "razorpay_payment_id": null,
+    "razorpay_signature": null,
+    "amount": 50000,
+    "status": "CREATED",
+    "created_at": "2026-04-08T09:06:22.914Z"
+  }
+},
+{
+  "model": "orders.payment",
+  "pk": 2,
+  "fields": {
+    "user": 6,
+    "order": 16,
+    "razorpay_order_id": "order_Sawdlj9dUi7Nt0",
+    "razorpay_payment_id": null,
+    "razorpay_signature": null,
+    "amount": 50000,
+    "status": "CREATED",
+    "created_at": "2026-04-08T09:13:04.707Z"
+  }
+},
+{
+  "model": "orders.payment",
+  "pk": 3,
+  "fields": {
+    "user": 6,
+    "order": 17,
+    "razorpay_order_id": "order_SawgyniuoPdVxy",
+    "razorpay_payment_id": null,
+    "razorpay_signature": null,
+    "amount": 50000,
+    "status": "CREATED",
+    "created_at": "2026-04-08T09:16:07.092Z"
+  }
+},
+{
+  "model": "orders.payment",
+  "pk": 4,
+  "fields": {
+    "user": 6,
+    "order": 18,
+    "razorpay_order_id": "order_SawmKIcTprzjLF",
+    "razorpay_payment_id": null,
+    "razorpay_signature": null,
+    "amount": 50000,
+    "status": "CREATED",
+    "created_at": "2026-04-08T09:21:10.785Z"
+  }
+},
+{
+  "model": "orders.payment",
+  "pk": 5,
+  "fields": {
+    "user": 6,
+    "order": 19,
+    "razorpay_order_id": "order_SawpxKwauNUWNF",
+    "razorpay_payment_id": null,
+    "razorpay_signature": null,
+    "amount": 50000,
+    "status": "CREATED",
+    "created_at": "2026-04-08T09:24:36.945Z"
+  }
+},
+{
+  "model": "orders.payment",
+  "pk": 6,
+  "fields": {
+    "user": 6,
+    "order": 20,
+    "razorpay_order_id": "order_SawvpkRQ55iAJh",
+    "razorpay_payment_id": null,
+    "razorpay_signature": null,
+    "amount": 50000,
+    "status": "CREATED",
+    "created_at": "2026-04-08T09:30:10.812Z"
+  }
+},
+{
+  "model": "orders.payment",
+  "pk": 7,
+  "fields": {
+    "user": 6,
+    "order": 21,
+    "razorpay_order_id": "order_SawxNsS8bVV6K7",
+    "razorpay_payment_id": null,
+    "razorpay_signature": null,
+    "amount": 200,
+    "status": "CREATED",
+    "created_at": "2026-04-08T09:31:38.857Z"
+  }
+},
+{
+  "model": "core.contactmessage",
+  "pk": 1,
+  "fields": {
+    "name": "ttttt",
+    "email": "nasimnavas52@gmail.com",
+    "subject": "ww",
+    "message": "aaa",
+    "created_at": "2026-03-31T07:12:20.995Z"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 3,
+  "fields": {
+    "user": 3,
+    "phone": "",
+    "address": ""
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 5,
+  "fields": {
+    "user": 5,
+    "phone": "",
+    "address": ""
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 6,
+  "fields": {
+    "user": 6,
+    "phone": "",
+    "address": ""
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 7,
+  "fields": {
+    "user": 7,
+    "phone": "",
+    "address": ""
+  }
+}
+]
