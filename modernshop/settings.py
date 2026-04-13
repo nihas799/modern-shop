@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'orders',
     'core',
     'users.apps.UsersConfig',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -132,9 +134,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = '/'
@@ -156,3 +161,14 @@ DEFAULT_FROM_EMAIL = 'ModernShop <yourgmail@gmail.com>'
 
 RAZORPAY_KEY_ID =os.getenv('RAZORPAY_KEY_ID')
 RAZORPAY_KEY_SECRET = os.getenv('RAZORPAY_KEY_SECRET')
+
+
+import cloudinary
+
+cloudinary.config(
+    cloud_name = "dw2xj8nuv",
+    api_key = "	882814319185821",
+    api_secret = "lPliB53XW_j9gPd4URE4oiDipbU"
+)
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
