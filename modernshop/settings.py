@@ -166,9 +166,9 @@ RAZORPAY_KEY_SECRET = os.getenv('RAZORPAY_KEY_SECRET')
 import cloudinary
 
 cloudinary.config(
-    cloud_name = "dw2xj8nuv",
-    api_key = "	882814319185821",
-    api_secret = "lPliB53XW_j9gPd4URE4oiDipbU"
+    CLOUDINARY_CLOUD_NAME =os.getenv('CLOUDINARY_CLOUD_NAME'),
+    CLOUDINARY_API_KEY= os.getenv('CLOUDINARY_API_KEY'),
+    CLOUDINARY_API_SECRET= os.getenv('CLOUDINARY_API_SECRET'),
 )
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
