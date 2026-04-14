@@ -153,7 +153,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER ')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 DEFAULT_FROM_EMAIL = 'ModernShop <yourgmail@gmail.com>'
@@ -165,9 +165,9 @@ RAZORPAY_KEY_SECRET = os.getenv('RAZORPAY_KEY_SECRET')
 import cloudinary
 
 cloudinary.config(
-    CLOUDINARY_CLOUD_NAME =os.getenv('CLOUDINARY_CLOUD_NAME'),
-    CLOUDINARY_API_KEY= os.getenv('CLOUDINARY_API_KEY'),
-    CLOUDINARY_API_SECRET= os.getenv('CLOUDINARY_API_SECRET'),
+    cloud_name = os.getenv('CLOUDINARY_CLOUD_NAME'),
+    api_key = os.getenv('CLOUDINARY_API_KEY'),
+    api_secret = os.getenv('CLOUDINARY_API_SECRET'),
 )
 
 CLOUDINARY_STORAGE = {
